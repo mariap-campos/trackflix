@@ -1,3 +1,4 @@
+/* resetando e configurando principais configuracoes do css */
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -5,13 +6,14 @@
 
 :root {
   --primary: #0abde3;
-  --black: #222;
+  --black: #111;
+  --grayDark: #222;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
-  --grayMedium: #e5e5e5; 
-  --white: #FFFFFF;
+  --grayMedium: #444444; 
+  --white: #e2e2e2;
   --frontEnd: #6BD1FF;
-  --backEnd: #00C86F;
+  --backEnd: #222725;
 }
 
 html,
@@ -22,4 +24,10 @@ body {
 
 a {
   color: inherit;
+}
+
+#root{
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
 }

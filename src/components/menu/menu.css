@@ -1,9 +1,11 @@
 .Logo {
-    max-width: 200px;
+    max-width: 230px;     
+    
   }
+
   @media (max-width: 800px) {
     .Logo {
-      max-width: 105px;
+      max-width: 110px;
     }
   }
   
@@ -60,11 +62,11 @@
   
   @media (max-width: 800px) {
     a.ButtonLink {
+      background: linear-gradient(130deg, var(--primary) 100%, var(--secundary) 431E52%) !important;
       position: fixed;
       left: 0;
       right: 0;
       bottom: 0;
-      background: var(--primary);
       border-radius: 0;
       border: 0;
       text-align: center;

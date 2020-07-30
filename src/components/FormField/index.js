@@ -8,7 +8,7 @@ position: relative;
     min-height: 150px;
   }
   input[type="color"] {
-    padding-left: 56px;
+    padding-left: 70px;
   }
 `;
 
@@ -21,7 +21,6 @@ Label.Text = styled.span`
   position: absolute; 
   top: 0;
   left: 16px;
-  
   display: flex;
   align-items: center;
   
@@ -43,8 +42,8 @@ const Input = styled.input`
   
   outline: 0;
   border: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid #53585D;
+  border-top: 0px solid transparent;
+  border-bottom: 2px solid #53585D;
   
   padding: 16px 16px;
   margin-bottom: 45px;
@@ -54,8 +53,8 @@ const Input = styled.input`
   transition: border-color .3s;
   
   &:focus {
-    border-bottom-color: var(--primary);
-    background: red;
+    border-bottom-color: var(--secundary);
+    background: rgba(83,22,126,0.3);
   }
   &:focus:not([type='color']) + ${Label.Text} {
     transform: scale(.6) translateY(-10px); 

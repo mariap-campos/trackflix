@@ -45,6 +45,12 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
+  background: linear-gradient(130deg, rgba(83,22,126,0.2) 100%, rgba(201,103,163,0.2) 431E52%);
+  padding: 20px;
+  border-radius:10px;
+  border: 2px solid var(--secundary);
+  text-align:justify;
+
   @media (max-width: 800px) {
     display: none;
   }
@@ -100,6 +106,7 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
+  background: var(--secundary);
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
@@ -112,8 +119,7 @@ export const WatchButton = styled.button`
   text-decoration: none;
   display: inline-block;
   border: 1px solid transparent;
-  color: var(--black);
-  background: var(--white);
+  color: var(--white);
   border-color: var(--black);
   transition: opacity .3s;
   display: none;

@@ -9,7 +9,7 @@ const Main = styled.main`
     padding-top: 50px;
     padding-left: 5%;
     padding-right: 5%;
-    background-color: var(--black);
+    background-color: var(--grayDark);
 `;
 
 function PageDefault({ children }) {

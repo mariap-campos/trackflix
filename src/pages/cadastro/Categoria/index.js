@@ -97,7 +97,7 @@ function CadastroCategoria() {
       </ul>
 
       <Link to="/">
-        Ir para home
+        Home
       </Link>
     </PageDefault>
   );

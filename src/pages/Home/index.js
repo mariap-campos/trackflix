@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
-  background: var(--grayDark);
+  background: var(--black);
 `;
 
 function Home() {

@@ -4,23 +4,29 @@ export const VideoCardContainer = styled.a`
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  flex: 0 0 299px;
-  width: 355px;
-  height: 197px;
+  width: 352px;
+  height: 198px;
+  border-radius: 20px;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
-  transition: opacity  .3s;
+  filter: grayscale(0.4);
+  transition: opacity .5s, background-size .7s, filter .5s;
   &:hover,
   &:focus {
-    opacity: .5;
-
+    filter: grayscale(0);
+    background-size: initial;
   }
-  
   &:not(:first-child) {
     margin-left: 20px;
   
   }
 `;
+
+export const VideoCardContainerE = styled.div`
+  height: 300px;
+  
+`;
+

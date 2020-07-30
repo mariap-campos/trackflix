@@ -3,8 +3,10 @@ import styled from 'styled-components';
 export const VideoContainer = styled.div`
   position: relative;
   overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30vh;
   @media (max-width: 800px) {
     display: none;
   }
@@ -18,4 +20,5 @@ export const ResponsiveIframe = styled.iframe`
   right: 0;
   width: 100%;
   height: 100%;
+  border-radius: 10px
 `;

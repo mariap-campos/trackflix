@@ -1,5 +1,5 @@
 .Logo {
-    max-width: 168px;
+    max-width: 200px;
   }
   @media (max-width: 800px) {
     .Logo {
@@ -9,26 +9,23 @@
   
   .Menu {
     width: 100%;
-    height: 94px;
+    height: 90px;
     z-index: 100;
-  
+    background-color: var(--grayLight);
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     padding-left: 5%;
     padding-right: 5%;
-  
-    background: rgba(0,0,0,0.8);;
   }
   body {
+    background-color: var(--grayLight);
     --bodyPaddingTop: 94px;
     padding-top: var(--bodyPaddingTop);
-    background: var(--black);
   }
   @media (max-width: 800px) {
     .Menu {

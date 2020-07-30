@@ -25,7 +25,6 @@ ContentAreaContainer.Item = styled.div`
 `;
 
 ContentAreaContainer.Category = styled.h1`
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 60px;
@@ -52,10 +51,10 @@ ContentAreaContainer.Description = styled.p`
 `;
 
 ContentAreaContainer.Title = styled.h2`
-  font-style: normal;
-  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: 400;
   font-size: 40px;
-  line-height: 1;
+  line-height: 1.5;
   margin-top: 0;
   margin-bottom: 32px;
 
@@ -91,12 +90,12 @@ export const BannerMainContainer = styled.section`
   &:before {
     top: 0;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: linear-gradient(180deg, var(--grayDark) 10%, rgba(5,5,5,0.9) 100%);
   }
 
   &:after {
     bottom: 0;
-    background: linear-gradient(0deg, #111 0%, transparent 100%);
+
   }
 `;
 

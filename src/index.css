@@ -1,15 +1,15 @@
 /* resetando e configurando principais configuracoes do css */
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 :root {
   --primary: #0abde3;
-  --black: #111;
+  --black: #0e0e0e;
   --grayDark: #222;
   --blackLighter: #9E9E9E;
-  --grayLight: #F5F5F5;
+  --grayLight: #f3f1f1;
   --grayMedium: #444444; 
   --white: #e2e2e2;
   --frontEnd: #6BD1FF;

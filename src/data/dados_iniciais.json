@@ -1,29 +1,29 @@
 {
   "categorias": [
     {
-      "titulo": "Dev Ed",
-      "link": "https://www.alura.com.br/formacao-front-end",
+      "titulo": "Games Soundtrack",
+      "link": "https://www.youtube.com/playlist?list=PLF5UioB1228h_B3XJR_iLT7hX8AnEueh3",
       "cor": "#feca57",
       "link_extra": {
-        "text": "Progamming with Dev Ed",
-        "url": "https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q"
+        "text": "Youtube Playlist",
+        "url": "https://www.youtube.com/playlist?list=PLF5UioB1228h_B3XJR_iLT7hX8AnEueh3"
       },
       "videos": [
         {
-          "titulo": "React Tutorial For Beginners",
-          "url": "https://www.youtube.com/watch?v=dGcsHMXbSOA&list=PLDyQo7g0_nsVHmyZZpVJyFn5ojlboVEhE&index=2tbY&list=PLDyQo7g0_nsX8_gZAB8KD1lL4j4halQBJ"
+          "titulo": "The Last of Us Part II",
+          "url": "https://www.youtube.com/watch?v=lB_66LLKSGA"
         },
         {
-          "titulo": "Getting Started With Javascript | Javascript Tutorial For Beginners",
-          "url": "https://www.youtube.com/watch?v=2nZiB1JItbY&list=PLDyQo7g0_nsX8_gZAB8KD1lL4j4halQBJ&index=1"
+          "titulo": "God of War",
+          "url": "https://www.youtube.com/watch?v=f9V8sDa04Mc"
         },
         {
-          "titulo": "Componentização com VanillaJS #AluraMais",
-          "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+          "titulo": "Spider Man",
+          "url": "https://www.youtube.com/watch?v=B_jPNlVeZNQ"
         },
         {
-          "titulo": "Pare de chutar e aprenda a display: inline #01",
-          "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+          "titulo": "Detroit: Become Human",
+          "url": "https://www.youtube.com/watch?v=WiPHMkPbKAA"
         },
         {
           "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",

@@ -13,11 +13,11 @@ export const VideoCardContainer = styled.a`
   position: relative;
   display: flex;
   filter: grayscale(0.4);
-  transition: opacity .5s, background-size .7s, filter .5s;
+  transition: opacity .5s, filter .5s;
   &:hover,
   &:focus {
-    filter: grayscale(0);
-    background-size: initial;
+    filter: grayscale(0) brightness(1.3);
+    
   }
   &:not(:first-child) {
     margin-left: 20px;
@@ -25,8 +25,5 @@ export const VideoCardContainer = styled.a`
   }
 `;
 
-export const VideoCardContainerE = styled.div`
-  height: 300px;
-  
-`;
+
 

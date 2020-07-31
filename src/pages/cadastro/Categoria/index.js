@@ -1,34 +1,22 @@
+/* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '',
   };
+
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
-
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  function handleChange(infosDoEvento) {
-    setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value,
-    );
-  }
 
   useEffect(() => {
-    console.log('alo');
     const URL_HOST = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
       : 'https://trackflix-mariap.herokuapp.com/categorias';
@@ -46,7 +34,7 @@ function CadastroCategoria() {
     <PageDefault>
       <h1>
         Cadastro de Categorias:
-        {values.nome}
+        {values.titulo}
       </h1>
 
       <form onSubmit={function handleSubmit(infosDoEvento) {
@@ -55,7 +43,7 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-        setValues(valoresIniciais);
+        clearForm();
       }}
       >
 
@@ -63,8 +51,8 @@ function CadastroCategoria() {
           placeholder="Categoria"
           label="Nome da Categoria "
           type="text"
-          name="nome"
-          value={values.nome}
+          name="titulo"
+          value={values.titulo}
           onChange={handleChange}
         />
 
@@ -98,9 +86,9 @@ function CadastroCategoria() {
       )}
 
       <ul>
-        {categorias.map((categorias, indice) => (
-          <li key={`${categorias}${indice}`}>
-            {categorias.nome}
+        {categorias.map((categorias) => (
+          <li key={`${categorias.titulo}`}>
+            {categorias.titulo}
           </li>
         ))}
       </ul>

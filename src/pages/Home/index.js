@@ -1,21 +1,53 @@
-import React from 'react';
-import styled from 'styled-components';
-import dadosIniciais from '../../data/dados_iniciais.json';
+import React, { useEffect, useState } from 'react';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
-import Menu from '../../components/Menu';
-
-const AppWrapper = styled.div`
-  background: var(--black);
-`;
+import categoriasRepository from '../../repositories/categorias';
+import PageDefault from '../../components/PageDefault';
 
 function Home() {
-  return (
-    <AppWrapper>
-      <Menu />
+  const [dadosIniciais, setDadosIniciais] = useState([]);
 
-      <BannerMain
+  useEffect(() => {
+    categoriasRepository.getAllWithVideos()
+      .then((categoriasComVideo) => {
+        setDadosIniciais(categoriasComVideo);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  return (
+    <PageDefault paddingAll={0}>
+      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+
+      {dadosIniciais.map((categoria, indice) => {
+        if (indice === 0) {
+          return (
+            <div key={categoria.id}>
+              <BannerMain
+                videoTitle={dadosIniciais[0].videos[0].titulo}
+                url={dadosIniciais[0].videos[0].url}
+                videoDescription="testando"
+                // videoDescription={dadosIniciais[0].videos[0].description}
+              />
+              <Carousel
+                ignoreFirstVideo
+                category={dadosIniciais[0]}
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Carousel
+            key={categoria.id}
+            category={categoria}
+          />
+        );
+      })}
+
+      {/* <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
         videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
@@ -44,10 +76,8 @@ function Home() {
 
       <Carousel
         category={dadosIniciais.categorias[5]}
-      />
-
-      <Footer />
-    </AppWrapper>
+      /> */}
+    </PageDefault>
   );
 }
 

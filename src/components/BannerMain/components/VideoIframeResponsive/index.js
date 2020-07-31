@@ -11,6 +11,7 @@ function YouTubeIframeResponsive({ youtubeID }) {
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
+        SameSite="None"
       />
     </VideoContainer>
   );

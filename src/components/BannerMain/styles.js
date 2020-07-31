@@ -45,7 +45,7 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
-  background: linear-gradient(130deg, rgba(83,22,126,0.2) 100%, rgba(201,103,163,0.2) 431E52%);
+  /* background: linear-gradient(130deg, rgba(83,22,126,0.2) 100%, rgba(201,103,163,0.2) 431E52%); */
   padding: 20px;
   border-radius:10px;
   border: 2px solid var(--secundary);
@@ -62,7 +62,7 @@ ContentAreaContainer.Title = styled.h2`
   font-size: 40px;
   line-height: 1.5;
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
   @media (max-width: 800px) {
     font-size: 32px;

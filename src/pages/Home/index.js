@@ -28,7 +28,7 @@ function Home() {
               <BannerMain
                 videoTitle={dadosIniciais[0].videos[0].titulo}
                 url={dadosIniciais[0].videos[0].url}
-                videoDescription="testando"
+                videoDescription="Unbroken - Gustavo Santaolalla / The Last of Us Part II (Original Soundtrack)"
                 // videoDescription={dadosIniciais[0].videos[0].description}
               />
               <Carousel

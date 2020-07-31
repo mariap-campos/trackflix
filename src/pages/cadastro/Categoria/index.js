@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -26,6 +26,19 @@ function CadastroCategoria() {
       infosDoEvento.target.value,
     );
   }
+
+  useEffect(() => {
+    console.log('alo');
+    const url_ = 'http://localhost:8080/categorias';
+
+    fetch(url_)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
+  }, []);
 
   return (
     <PageDefault>
@@ -62,18 +75,6 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        {/* <div>
-                    <label>
-                        Descrição:
-                        <textarea
-                        type="text"
-                        name="descricao"
-                        value={values.descricao}
-                        onChange={handleChange}
-                        />
-                    </label>
-                </div> */}
-
         <FormField
           placeholder="Cor"
           label="Cor "
@@ -87,6 +88,12 @@ function CadastroCategoria() {
           Cadastrar
         </Button>
       </form>
+
+      {categorias.length === 0 && (
+        <div>
+          Loading...
+        </div>
+      )}
 
       <ul>
         {categorias.map((categorias, indice) => (
@@ -102,4 +109,5 @@ function CadastroCategoria() {
     </PageDefault>
   );
 }
+
 export default CadastroCategoria;

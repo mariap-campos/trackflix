@@ -29,9 +29,11 @@ function CadastroCategoria() {
 
   useEffect(() => {
     console.log('alo');
-    const url_ = 'http://localhost:8080/categorias';
+    const URL_HOST = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://trackflix-mariap.herokuapp.com/categorias';
 
-    fetch(url_)
+    fetch(URL_HOST)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([

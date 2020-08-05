@@ -1,12 +1,14 @@
 /* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
+  const history = useHistory();
   const valoresIniciais = {
     titulo: '',
     descricao: '',
@@ -37,12 +39,18 @@ function CadastroCategoria() {
         {values.titulo}
       </h1>
 
-      <form onSubmit={function handleSubmit(infosDoEvento) {
-        infosDoEvento.preventDefault();
-        setCategorias([
-          ...categorias,
-          values,
-        ]);
+      <form onSubmit={(event) => {
+        event.preventDefault();
+        categoriasRepository.create({
+          titulo: values.titulo,
+          descricao: values.descricao,
+          cor: values.cor,
+
+        })
+          .then(() => {
+            console.log('Cadastrou com sucesso');
+            history.push('/');
+          });
         clearForm();
       }}
       >
@@ -86,9 +94,9 @@ function CadastroCategoria() {
       )}
 
       <ul>
-        {categorias.map((categorias) => (
-          <li key={`${categorias.titulo}`}>
-            {categorias.titulo}
+        {categorias.map((categoria) => (
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>

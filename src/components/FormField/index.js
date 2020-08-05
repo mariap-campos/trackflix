@@ -90,6 +90,7 @@ function FormField({
       >
         <Input
           as={tag}
+          id={fieldId}
           type={type}
           value={value}
           name={name}

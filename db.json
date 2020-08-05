@@ -124,12 +124,6 @@
       "categoriaId": 3,
       "titulo": "WestWorld",
       "url": "https://www.youtube.com/watch?v=sHgccQQVVHo"
-    },
-    {
-      "id": 17,
-      "categoriaId": 4,
-      "titulo": "Interestellar",
-      "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
-    }  
+    }
   ]
 }

@@ -26,9 +26,9 @@ function Home() {
           return (
             <div key={categoria.id}>
               <BannerMain
-                videoTitle={dadosIniciais[0].videos[0].titulo}
+                videoTitle="Find your favorite!"
                 url={dadosIniciais[0].videos[0].url}
-                videoDescription="Unbroken - Gustavo Santaolalla / The Last of Us Part II (Original Soundtrack)"
+                videoDescription="The best soundtracks from your favorite games, movies and tv-shows in one place for you to enjoy."
                 // videoDescription={dadosIniciais[0].videos[0].description}
               />
               <Carousel

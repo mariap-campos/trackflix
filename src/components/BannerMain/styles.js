@@ -57,7 +57,6 @@ ContentAreaContainer.Description = styled.p`
 `;
 
 ContentAreaContainer.Title = styled.h2`
-  text-transform: uppercase;
   font-weight: 400;
   font-size: 40px;
   line-height: 1.5;
